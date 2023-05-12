@@ -4,9 +4,6 @@ import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCallback
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothProfile
-import android.content.Context
-import android.util.Log
-import android.widget.Toast
 import de.jnns.bmsmonitor.bms.BmsCellInfoResponse
 import de.jnns.bmsmonitor.bms.BmsGeneralInfoResponse
 import java.util.*
@@ -25,12 +22,12 @@ class BmsGattClientCallback(
     lateinit var readCharacteristic: BluetoothGattCharacteristic
     lateinit var writeCharacteristic: BluetoothGattCharacteristic
 
-//    private val uartUuid = UUID.fromString("0000ff00-0000-1000-8000-00805f9b34fb")
-//    private val rxUuid = UUID.fromString("0000ff01-0000-1000-8000-00805f9b34fb")
-//    private val txUuid = UUID.fromString("0000ff02-0000-1000-8000-00805f9b34fb")
-    private val uartUuid = UUID.fromString("00000ff00-0000-1000-8000-00805f9b34fb")
-    private val rxUuid = UUID.fromString("00000x5a-0000-1000-8000-00805f9b34fb")
-    private val txUuid = UUID.fromString("00000xa5-0000-1000-8000-00805f9b34fb")
+    private val uartUuid = UUID.fromString("0000ff00-0000-1000-8000-00805f9b34fb")
+    private val rxUuid = UUID.fromString("0000ff01-0000-1000-8000-00805f9b34fb")
+    private val txUuid = UUID.fromString("0000ff02-0000-1000-8000-00805f9b34fb")
+//    private val uartUuid = UUID.fromString("000000xff-0000-1000-8000-00805f9b34fb")
+//    private val rxUuid = UUID.fromString("00000x5a-0000-1000-8000-00805f9b34fb")
+//    private val txUuid = UUID.fromString("00000xa5-0000-1000-8000-00805f9b34fb")
 
     private val bufferSize: Int = 80
     private var uartBuffer = ByteArray(bufferSize)
